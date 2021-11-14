@@ -17,7 +17,8 @@
     "client": "cd client && npm run start",
     "client:build": "cd client && npm run build",
     "app:start": "npm run client:build && npm run start",
-    "heroku-postbuild": "npm install --dev && cd client && npm install && npm run build",
+    "heroku-prebuild": "cd client && npm install --dev",
+    "heroku-postbuild": "cd client && npm run build",
     "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\""
   },
   "author": "",
